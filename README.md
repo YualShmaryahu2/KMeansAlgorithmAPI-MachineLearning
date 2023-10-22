@@ -10,7 +10,7 @@ This is the interface of the program, with the following requirements: (Reading 
 • eps: the value for convergence.
 • file_name_1: The path to the file 1 that will contain N observations.
 • file_name_2: The path to the file 2 that will contain N observations.
-
+**This program outputs the required matrix.**
 
 kmeansmodule.c:
 In this file the C extension is defined.
@@ -20,6 +20,7 @@ This is the build used to create the *.so file that will allow kmeans_pp.py to i
 
 kmeans.c:
 The implementation of KMeans algorithn in C.
+**This program outputs the required matrix.**
 
 kmeans.h:
 The Header file that inteface between kmeansmodule.c and kmeans.c.
