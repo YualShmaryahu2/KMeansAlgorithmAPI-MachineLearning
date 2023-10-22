@@ -1,0 +1,68 @@
+# K-Means Clustering Documentation
+
+This document explains the Python code for K-Means clustering. K-Means is a machine learning algorithm used to group data points into clusters based on their similarity.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Usage](#usage)
+- [Code Description](#code-description)
+- [Functions](#functions)
+- [Command-line Arguments](#command-line-arguments)
+- [Input Files](#input-files)
+- [Output](#output)
+
+## Introduction
+
+This code performs K-Means clustering on a dataset specified by the user. The code uses the `mykmeanssp` library, which is expected to contain the K-Means algorithm implementation. The algorithm aims to find K clusters within the data, where K is a user-defined parameter.
+
+## Usage
+
+To use this code, run it from the command line with the following syntax:
+python kmeans.py <k> <iterations> <epsilon> <input_file1> <input_file2>
+
+
+- `<k>`: Number of clusters to create.
+- `<iterations>`: Maximum number of iterations for the K-Means algorithm.
+- `<epsilon>`: A convergence threshold for stopping the algorithm.
+- `<input_file1>`: First input file containing data for clustering.
+- `<input_file2>`: Second input file containing data for clustering.
+
+## Code Description
+
+The code performs the following steps:
+
+1. Parses command-line arguments and validates them.
+2. Reads data from input files in either text (.txt) or CSV (.csv) format.
+3. Merges the data from the two input files based on a common index.
+4. Initializes cluster centroids by randomly selecting data points.
+5. Uses the K-Means algorithm from the `mykmeanssp` library to perform clustering.
+6. Outputs the clustering results to the console.
+
+## Functions
+
+1. `create_output(index_array, vectors_array)`: This function formats and prints the cluster assignments to the console.
+
+2. `calc_distance(vector1, vector2)`: Calculates the Euclidean distance between two data vectors.
+
+3. `find_closest_cluster(vector1, arr_of_vectors)`: Finds the cluster with the closest centroid to the given data vector.
+
+4. `sum_distance_arr(arr)`: Computes the sum of distances in an array.
+
+5. `main()`: The main function that orchestrates the entire clustering process.
+
+## Command-line Arguments
+
+- `<k>`: The number of clusters to create. Must be a positive integer.
+- `<iterations>`: The maximum number of iterations for the K-Means algorithm. Must be a positive integer.
+- `<epsilon>`: A floating-point value representing the convergence threshold.
+- `<input_file1>` and `<input_file2>`: Input files containing data for clustering. The files can be in either text (.txt) or CSV (.csv) format.
+
+## Input Files
+
+The code reads data from two input files specified by `<input_file1>` and `<input_file2>`. These files should contain numerical data for clustering. Data should be in a tabular format with a common index column for merging.
+
+## Output
+
+The code outputs the cluster assignments to the console. Each line represents the cluster assignment for a data point, and each cluster is represented by a set of data points.
+
