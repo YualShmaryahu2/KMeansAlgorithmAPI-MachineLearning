@@ -1,0 +1,78 @@
+===============================================================================
+                      K-Means Clustering Algorithm Documentation
+===============================================================================
+
+1. Introduction:
+   The provided C code implements the K-Means clustering algorithm, a popular unsupervised learning technique used to partition a dataset into K clusters based on similarity. This documentation describes the code's structure and functionality.
+
+2. Code Structure:
+   - The code consists of multiple functions for K-Means clustering, including distance calculation, centroid updating, and cluster creation.
+   - It employs a data structure to represent vectors with coordinates.
+   - The main K-Means function 'kmeans' performs the clustering process.
+
+3. Functions:
+   a. `build_table`:
+      - Function: Build a distance table for K-Means.
+      - Inputs: Number of clusters, input data, and dimension.
+   
+   b. `calc_distance`:
+      - Function: Calculate the Euclidean distance between two vectors.
+      - Inputs: Two vectors and dimension.
+
+   c. `update_centroid`:
+      - Function: Update the centroid of a cluster.
+      - Inputs: Clusters, cluster counts, dimension, new centroids, and number of clusters.
+
+   d. `calc_delta`:
+      - Function: Calculate the change in centroids (delta) between iterations.
+      - Inputs: New centroids, previous centroids, number of clusters, and dimension.
+
+   e. `create_output`:
+      - Function: Create output based on clustered data.
+      - Inputs: Vectors array, number of clusters, and dimension.
+
+   f. `kmeans`:
+      - Function: Perform K-Means clustering.
+      - Inputs: K (number of clusters), maximum iterations, input data, initial centroids, data size, dimension, and convergence threshold (epsilon).
+
+   g. `free_vector`:
+      - Function: Free the allocated memory for vectors.
+      - Inputs: A vector structure.
+
+   h. `build_clusters`:
+      - Function: Build clusters based on centroids.
+      - Inputs: Centroids, clusters, cluster counts, input data, dimension, data size, and number of clusters.
+
+   i. `free_matrices`:
+      - Function: Free dynamically allocated matrices.
+      - Inputs: 2D array and number of rows.
+
+   j. `copy`:
+      - Function: Copy data from one matrix to another.
+      - Inputs: Source and destination matrices, dimension, and number of clusters.
+
+   k. `freeVectors`:
+      - Function: Free the allocated memory for linked lists of vectors.
+      - Inputs: Head of the vector linked list.
+
+   l. `allocate_memory`:
+      - Function: Allocate memory for a 2D array.
+      - Inputs: Number of clusters and dimension.
+
+4. Implementation Details:
+   - The implementation details for each function are provided in the source code file.
+
+5. Usage:
+   - To use the K-Means algorithm, call the `kmeans` function with the desired parameters.
+   - The output clusters can be obtained using the `create_output` function.
+
+6. Author:
+   - Yuval Shmaryhu
+
+7. Date:
+   - 22.12.23
+
+8. Disclaimer:
+   - This code is provided as-is, and any modifications or improvements are the responsibility of the user.
+
+===============================================================================
