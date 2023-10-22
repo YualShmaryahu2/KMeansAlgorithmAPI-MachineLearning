@@ -66,3 +66,13 @@ The code reads data from two input files specified by `<input_file1>` and `<inpu
 
 The code outputs the cluster assignments to the console. Each line represents the cluster assignment for a data point, and each cluster is represented by a set of data points.
 
+
+
+Author:
+   - Yuval Shmaryhu
+
+Date:
+   - 22.12.23
+
+Disclaimer:
+   - This code is provided as-is, and any modifications or improvements are the responsibility of the user.
