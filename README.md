@@ -7,7 +7,7 @@ kmeans_pp.py:
 This is the interface of the program, with the following requirements: (Reading user CMD arguments)
 • k: Number of required clusters.
 • iter: (Optional) argument determines the number of K-means iterations, if not provided the default value is 300.
-• eps: the epsilob value for convergence.
+• eps: the value for convergence.
 • file_name_1: The path to the file 1 that will contain N observations.
 • file_name_2: The path to the file 2 that will contain N observations.
 
